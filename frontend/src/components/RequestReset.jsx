@@ -1,44 +1,4 @@
-// import { useState } from 'react'
-// import { useNavigate } from 'react-router-dom';
-// import API from '../api/axios.js';
 
-// function RequestReset() {
-
-//     const [email, setEmail] = useState("");
-//     const [msg, setMsg] = useState(null);
-//     const navigate = useNavigate();
-
-//     const handleRequest = async(e)=>{
-//         e.preventDefault();
-//         try {
-//             const { data } = await API.post("/auth/request-password-reset", {email});
-//             setMsg(data.message);
-//         } catch (error) {
-//             setMsg(error.response?.data?.message || "error requesting reset password"); 
-//         }
-//     }
-//   return (
-//     <div>
-//         <h2>Request Password Change</h2>
-//         <form onSubmit={handleRequest}>
-//             <input 
-//             type="email"
-//             placeholder="email"
-//             value={email}
-//             onChange={(e)=> setEmail(e.target.value)}
-//             required
-//             />
-//             <button type='submit'>Send Reset Email</button>
-//             {msg && <p>{msg}</p>}
-//         </form>
-//         <p>
-//             <button onClick={()=> navigate('/login')}>Back to login</button>
-//         </p>
-//     </div>
-//   )
-// }
-
-// export default RequestReset
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import API from '../api/axios.js';
